@@ -1,0 +1,18 @@
+@mixin dpr($number){
+	@media (-webkit-min-device-pixel-ratio:$number),(min-device-pixel-ratio:$number) {
+		@content;
+	}
+}
+
+@mixin bg2($name){
+	width: width("#{$name}@2x.png");
+	height: height("#{$name}@2x.png");
+	background-repeat: no-repeat;
+	background-image: url(#{$name}@2x.png);
+}
+@mixin bg3($name){
+	width: width("#{$name}@3x.png");
+	height: height("#{$name}@3x.png");
+	background-repeat: no-repeat;
+	background-image: url(#{$name}@3x.png);
+}
